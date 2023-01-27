@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Home</title>
+
+    <!-- Here I had to add some inline CSS to change 
+        our column paddings and margins in order to get a smoother view-->
+    <style>
+    .row {
+    margin-top: 0%;
+    display: flex;
+    justify-content: space-between;
+}
+    .aboutUs {
+    width: 90%;
+    margin: auto;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.aboutColum {
+    flex-basis: 50%;    
+    padding: 0px 2px;
+    background: white;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+/* here we put a nice effect shadow and a scale up effect */
+.aboutColum:hover{
+    box-shadow: 0 0 60px 0px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+
+    </style>
+</head>
+<body>
+    <section class="header-website4">
+        <!-- navbar with the logo -->
+        <nav>
+            <a href="home.html"><img class="logo" src="images/logo.png" alt="logo"></a>
+            <div class="nav-pages">
+                <ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="AboutUs.html">ABOUT US</a></li>
+                    <li><a href="ThingsTODO.html">THINGS TO DO</a></li>
+                    <li><a href="foodDring.html">FOOD AND DRINK</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- title, and the button -->
+        <div class="titleText">
+            <h1>Hospitality </h1>
+            <p>A previous lock of our food traditional Gastronomy and Exotic places of Craiova</p>
+
+    </section>
+    <section style="margin-bottom: 58px;" class="contentHeader">
+        <h1>Gallery</h1>
+    </section>
+
+    <section class="gallery">
+        
+        <div class="aboutUs">
+            <div class="row">
+                <div class="aboutColum">
+                    <img src="images/food7.jpg" alt="">
+                </div>
+                <div class="aboutColum">
+                    <img src="images/drink1.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="aboutUs">
+            <div class="row">
+                <div class="aboutColum">
+                    <img src="images/food1.jpg" alt="">
+                </div>
+                <div class="aboutColum">
+                    <img src="images/food5.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="aboutUs">
+            <div class="row">
+                <div class="aboutColum">
+                    <img src="images/food6.jpg" alt="">
+                </div>
+                <div class="aboutColum">
+                    <img src="images/drink2.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="aboutUs">
+            <div class="row">
+                <div class="aboutColum">
+                    <img src="images/buffet.jpg" alt="">
+                </div>
+                <div class="aboutColum">
+                    <img src="images/food4.jpg" alt="">
+                </div>
+                <div class="aboutColum">
+                    <img src="images/vin.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+
+<!----------------------------------FOOTER----------------------------- -->
+<section style="margin-top: 100px;" class="footer">
+    <h4>About our business</h4>
+    <p>Sing up today to get the latest news about our offers. All terms and conditions applicable<br>This website is part of a Craiova`s tourism group</p>
+    <a href="https://www.facebook.com/"><img class="socials" src="images/socials.jpg" alt=""></a>
+    <p>Made by Tourist in Your City S.R.L 2000-2022 <br>© Copyright . All rights reserved</p>
+</section>
+
+
+</body>
+</html>

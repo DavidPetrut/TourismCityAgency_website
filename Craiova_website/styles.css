@@ -1,0 +1,525 @@
+/* here I put 3 fonts in case 1 of them will not work, as a backup plan */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif, Arial, Helvetica;
+}
+
+/* PAGE: HOME */
+/* ----------------------header--------------------------------- */
+
+.header-website {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.6),rgba(4,9,30,0.6)), url(images/oras.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+/* here I change the logo size to lock better */
+.logo {
+    height: 80px;
+    width: 80px;
+    opacity: 80%;
+    border-radius: 10%;
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 150px;
+}
+
+.nav-pages {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-pages ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-pages ul li a {
+    color: white;
+    font-weight: 80%;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-pages ul li a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: orange;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-pages ul li a:hover::after {
+    width: 100%;
+}
+
+/* Designing the title and the button */
+
+.titleText {
+    width: 89%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.titleText h1 {
+    font-size: 64px;
+}
+
+.titleText p {
+    margin: 11px 0 38px;
+    font-size: 13px;
+    color: white;
+}
+
+.header-button {
+    display: inline-block;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 12px 34px;
+    font-size: 12px;
+    position: relative;
+    cursor: pointer;
+    background: transparent;
+}
+
+.header-button:hover{
+    border: 1px solid orange;
+    font-weight: bolder;
+    background-color: orange;
+    transition: 0.7s;
+}
+/* Here we add @media to resize the title when you open the website on the phone because is to big */
+@media(max-width:700px) {
+    .titleText h1 {
+        font-size: 22px;
+    }
+}
+
+
+/* -----------------------content---------------------- */
+
+.contentHeader {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    margin-top: 90px;
+}
+
+h1 {
+    font-size: 38px;
+    font-weight: 70%;
+}
+p {
+    line-height: 21px;
+    padding: 11px;
+    color: rgb(25, 20, 20);
+    font-size: 15px;
+}
+
+.row {
+    margin-top: 7%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.colums {
+    flex-basis: 31%;
+    background: rgb(238, 239, 238);
+    border-radius: 10px;
+    margin-bottom: 6%;
+    padding: 19px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.colums:hover{
+    box-shadow: 0 0 20px 0px rgb(0, 0, 0, 0.9);
+    cursor: pointer;
+}
+
+/* here we make sure our colums will lock good for mobile users */
+@media(max-width:700px){
+    .row {
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* HERE WE HAVE OUR OFFERS SECTION */
+
+.offers{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    
+}
+
+.offersRows{
+    flex-basis: 31%;
+    border-radius: 10%;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.offersRows img {
+    width: 100%;
+    border-radius: 9px;
+}
+
+.offersRows p {
+    padding: 0;
+}
+
+.offersRows h3 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* CONTENT-REVIEWS section */
+
+.reviews {
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+
+.userReviews {
+    flex-basis: 44%;
+    border-radius: 9px;
+    margin-bottom: 5px;
+    text-align: left;
+    background: rgb(238, 239, 238);
+    padding: 24px;
+    cursor: pointer;
+    display: flex;
+}
+
+.userReviews img {
+    height: 50px;
+    margin-left: 5px;
+    margin-right: 29px;
+    border-radius: 50%;
+}
+
+.userReviews p {
+    padding: 0; 
+}
+
+.userReviews h3 {
+    margin-top: 14px;
+    text-align: left;
+}
+
+
+/* Here I made 2 ids
+ so the image logo of 5star will change
+  only for this particular 2 */
+#fiveStar1{
+    border-radius: 0px;
+    height: 21px;
+    width: 100px;
+}
+#fiveStar2{
+    border-radius: 0px;
+    height: 21px;
+    width: 100px;
+}
+
+
+
+
+/* CONTENT-BOTTOM */
+
+.contentFoot{
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0,0,0,0.7)), url(images/orasTuristic.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 9px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.contentFoot h1{
+    color: white;
+    padding: 0;
+    margin-bottom: 38px;
+}
+
+
+
+
+/* ---------------------------Footer------------------------------------ */
+
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer h4 {
+    margin-bottom: 24px;
+    margin-top: 19px;
+    font-weight: bolder;
+}
+
+.socials {
+    width: 145.2px;
+    height: 29px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/* -----------------------------about us page */
+/* here we change the image of our background */
+.header-website2 {
+    min-height: 60vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.6),rgba(4,9,30,0.6)), url(images/team.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.header-website2 h1{
+    margin-top: 50px;
+}
+
+.aboutUs {
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.aboutColum {
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+
+.aboutColum img {
+    width: 100%;
+    height: 400px;
+}
+
+.aboutColum h1 {
+    padding-top: 0;
+}
+
+.aboutColum p {
+    padding: 15px 0 25px;
+}
+
+/* HERE WE NEED TO UPDATE OUR BUTTON IN ORDER 
+TO CHANGE COLOR IN THE WHITE SPACE OF THE WEBSITE */
+.newButton{
+    display: inline-block;
+    border: 1px solid orange;
+    text-decoration: none;
+    padding: 12px 34px;
+    font-size: 12px;
+    position: relative;
+    cursor: pointer;
+    background: transparent;
+    border: 1 px solid orange;
+    background: transparent;
+    color: black;
+    transition: 0.3s;
+}
+
+.newButton:hover{
+    background: orange;
+    color: white;
+}
+
+
+
+
+
+/* ------------------------------Things to do PAGE */
+
+
+/* here we change the image of our background */
+.header-website3 {
+    min-height: 60vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.6),rgba(4,9,30,0.6)), url(images/orasTuristic.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.header-website3 h1{
+    margin-top: 50px;
+}
+
+
+/* Here I want to change the background picture of the footer
+ to a restaurant one so i had to copy paste the code to adjust with different class */
+
+ .contentFoot2{
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(38, 31, 31, 0.7),rgba(53, 42, 42, 0.7)), url(images/restaurant.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 9px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.contentFoot2 h1{
+    color: white;
+    padding: 0;
+    margin-bottom: 38px;
+}
+
+
+
+
+
+
+
+
+/* -----------------------FOOD AND DRINKS PAGE */
+
+
+
+/* here we change the image of our background */
+.header-website4 {
+    min-height: 60vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.6),rgba(4,9,30,0.6)), url(images/vin.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.header-website4 h1{
+    margin-top: 50px;
+}
+
+
+
+
+
+/* --------------------------- CONTACT US PAGE */
+
+/* here we change the image of our background */
+.header-website5 {
+    min-height: 60vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.6),rgba(4,9,30,0.6)), url(images/contactus.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.header-website5 h1{
+    margin-top: 50px;
+}
+
+
+.container-form {
+    display: inline-block;
+    width: 100%;
+    margin-top: 60px;
+}
+
+.row-from-form{
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+
+.container-form div {
+    padding-top: 40px;
+    width: 100%;
+}
+
+#name {
+    font-size: 25px;
+}
+#email {
+    font-size: 25px;
+}
+#age {
+    font-size: 25px;
+    width: 21%;
+}
+#phone {
+    font-size: 25px;
+}
+
+#massage {
+    padding-top: 0px;
+    padding-bottom: 80px;
+    width: 34%;
+    text-align: left;
+    font-size: 20px;
+}
+
+.mybutton{
+    text-align: center;
+    padding-top: 20px;
+}
+
+#special-btn{
+    display: inline-block;
+    border: 1px solid black;
+    color: black;
+    border-radius: 0%;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
